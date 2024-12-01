@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.keras.datasets import mnist
+
+# MNIST veri setini yükle
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# İlk resmi seç
+resim = x_train[0]
+
+# Resmi ekranda gösterme
+plt.imshow(resim, cmap='gray')
+plt.title(f"Rakam: {y_train[0]}")
+plt.axis('off')  # Eksenleri gizle
+plt.show()
